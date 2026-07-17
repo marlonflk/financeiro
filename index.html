@@ -8,6 +8,7 @@
 
 <title>Financeiro Marlon</title>
 
+
 <style>
 
 *{
@@ -17,19 +18,13 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
+
 body{
 
+    height:100vh;
+    display:flex;
+    flex-direction:column;
     background:#08111f;
-    color:white;
-
-}
-
-
-.container{
-
-    width:90%;
-    max-width:1200px;
-    margin:auto;
 
 }
 
@@ -38,230 +33,155 @@ body{
 
 header{
 
+    height:65px;
+    background:#0f172a;
+    color:white;
+
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    padding:30px 0;
+    justify-content:space-between;
+
+    padding:0 25px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.3);
 
 }
 
 
 .logo{
 
-    font-size:28px;
+    font-size:24px;
     font-weight:bold;
-    color:#38bdf8;
 
 }
 
 
 .logo span{
 
-    color:white;
-
-}
-
-
-/* HERO */
-
-.hero{
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    min-height:600px;
-    gap:40px;
-
-}
-
-
-.hero-text{
-
-    max-width:550px;
-
-}
-
-
-.hero h1{
-
-    font-size:52px;
-    line-height:1.1;
-    margin-bottom:20px;
-
-}
-
-
-.hero h1 span{
-
     color:#38bdf8;
 
 }
 
 
-.hero p{
+.usuario{
 
-    font-size:20px;
+    font-size:14px;
     color:#cbd5e1;
-    margin-bottom:35px;
-    line-height:1.6;
 
 }
 
 
-.buttons{
 
+/* ÁREA PRINCIPAL */
+
+
+.container{
+
+    flex:1;
     display:flex;
-    gap:20px;
 
 }
 
 
-button{
 
-    padding:15px 30px;
-    border-radius:10px;
-    border:none;
-    cursor:pointer;
-    font-size:16px;
-    font-weight:bold;
-
-}
+/* MENU */
 
 
-.btn-primary{
+.menu{
 
-    background:#38bdf8;
-    color:#00111f;
+    width:230px;
+    background:#111827;
 
-}
-
-
-.btn-secondary{
-
-    background:transparent;
-    color:white;
-    border:1px solid #38bdf8;
-
-}
-
-
-/* CARD */
-
-.dashboard{
-
-    width:450px;
-    height:300px;
-    background:#111c30;
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 0 40px rgba(56,189,248,.2);
-
-}
-
-
-.card{
-
-    background:#172554;
     padding:20px;
-    border-radius:15px;
-    margin-bottom:15px;
+
+    color:white;
 
 }
 
 
-.card h3{
+.menu h3{
 
+    margin-bottom:25px;
     color:#38bdf8;
 
 }
 
 
-/* FUNCIONALIDADES */
+.menu a{
 
-.features{
-
-    padding:80px 0;
-
-}
-
-
-.features h2{
-
-    text-align:center;
-    font-size:35px;
-    margin-bottom:40px;
-
-}
-
-
-.grid{
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-
-}
-
-
-.box{
-
-    background:#111c30;
-    padding:30px;
-    border-radius:15px;
-
-}
-
-
-.box h3{
-
-    color:#38bdf8;
-    margin-bottom:15px;
-
-}
-
-
-.box p{
+    display:block;
 
     color:#cbd5e1;
 
-}
+    text-decoration:none;
 
+    padding:12px;
 
-/* RODAPÉ */
+    margin-bottom:8px;
 
-footer{
-
-    text-align:center;
-    padding:30px;
-    color:#94a3b8;
+    border-radius:8px;
 
 }
 
 
-@media(max-width:900px){
+.menu a:hover{
 
-.hero{
-
-    flex-direction:column;
-
-}
-
-.hero h1{
-
-    font-size:40px;
+    background:#1e293b;
+    color:white;
 
 }
 
-.dashboard{
+
+
+/* ÁREA DO SISTEMA */
+
+
+.conteudo{
+
+    flex:1;
+    background:#e5e7eb;
+
+}
+
+
+iframe{
 
     width:100%;
 
-}
+    height:100%;
+
+    border:none;
 
 }
+
+
+
+/* CELULAR */
+
+
+@media(max-width:800px){
+
+
+.menu{
+
+    display:none;
+
+}
+
+
+.logo{
+
+    font-size:18px;
+
+}
+
+
+}
+
 
 
 </style>
+
 
 </head>
 
@@ -269,184 +189,108 @@ footer{
 <body>
 
 
-<div class="container">
-
-
 <header>
 
+
 <div class="logo">
+
 Financeiro <span>Marlon</span>
+
 </div>
+
+
+<div class="usuario">
+
+Sistema Online
+
+</div>
+
 
 </header>
 
 
 
-<section class="hero">
 
+<div class="container">
 
-<div class="hero-text">
 
 
-<h1>
-Controle suas finanças
-<span>de forma inteligente</span>
-</h1>
+<nav class="menu">
 
 
-<p>
-Uma plataforma completa para acompanhar bancos,
-cartões, despesas, investimentos e sua vida financeira
-em um único lugar.
-</p>
+<h3>
 
+Menu
 
-<div class="buttons">
+</h3>
 
 
-<button class="btn-primary" onclick="entrar()">
-🚀 Entrar no Sistema
-</button>
+<a href="#">
 
+🏠 Início
 
-<button class="btn-secondary">
-📩 Solicitar Acesso
-</button>
+</a>
 
 
-</div>
+<a href="#">
 
+📊 Dashboard
 
-</div>
+</a>
 
 
+<a href="#">
 
-<div class="dashboard">
+💰 Lançamentos
 
+</a>
 
-<div class="card">
 
-<h3>Saldo Geral</h3>
+<a href="#">
 
-<p>Controle seu patrimônio em tempo real</p>
+💳 Cartões
 
-</div>
+</a>
 
 
-<div class="card">
+<a href="#">
 
-<h3>Cartões</h3>
+🏦 Bancos
 
-<p>Acompanhe seus gastos e limites</p>
+</a>
 
-</div>
 
+<a href="#">
 
-<div class="card">
+📈 Investimentos
 
-<h3>Dashboard</h3>
+</a>
 
-<p>Relatórios completos</p>
 
-</div>
 
+</nav>
 
-</div>
 
 
-</section>
 
 
+<div class="conteudo">
 
 
-<section class="features">
+<iframe
 
+src="https://script.google.com/macros/s/AKfycbwZvSapiG8W1X-IkzPmoVhlwGC5N83p-PpmTXO1HrXR-9W73qyKzoGl0UjlZ6BGZEz5Sg/exec"
 
-<h2>
-Tudo em um só lugar
-</h2>
+allowfullscreen>
 
-
-<div class="grid">
-
-
-<div class="box">
-
-<h3>🏦 Bancos</h3>
-
-<p>
-Controle seus saldos bancários.
-</p>
-
-</div>
-
-
-<div class="box">
-
-<h3>💳 Cartões</h3>
-
-<p>
-Veja gastos e faturas.
-</p>
-
-</div>
-
-
-<div class="box">
-
-<h3>📊 Dashboard</h3>
-
-<p>
-Informações organizadas e fáceis de entender.
-</p>
-
-</div>
-
-
-<div class="box">
-
-<h3>📈 Investimentos</h3>
-
-<p>
-Acompanhe sua evolução financeira.
-</p>
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-<footer>
-
-Financeiro Marlon © 2026
-
-</footer>
+</iframe>
 
 
 </div>
 
 
 
-<script>
-
-
-function entrar(){
-
-const linkAppScript =
-"https://script.google.com/macros/s/AKfycbwZvSapiG8W1X-IkzPmoVhlwGC5N83p-PpmTXO1HrXR-9W73qyKzoGl0UjlZ6BGZEz5Sg/exec";
-
-
-window.location.href = linkAppScript;
-
-
-}
-
-
-</script>
+</div>
 
 
 </body>
